@@ -4,7 +4,7 @@ Draw one stroke and turn it into an original repeating image through rotation, r
 
 ## Run and draw
 
-Run `python -m http.server 8000`, then open http://localhost:8000. No build or dependencies. Drag on the paper, or choose **Add a curve**. **Rotate** uses 2–16 copies; **Mirror** uses four reflections; **Tile** repeats a 3 × 3 grid. Change the palette or line width at any point. These settings apply to the whole image; the three colors choose the next stroke.
+Run `python -m http.server 8000`, then open http://localhost:8000. No build or dependencies. Drag on the paper, or choose **Add a curve**. **Rotate** uses 2–16 copies; **Mirror** uses four reflections; **Tile** repeats a 3 × 3 grid. **Style** holds the palette, line width and next-stroke colors; essential repeat, Undo and export controls remain on the work surface. Copies and line width preview continuously as you move their sliders, and each finished gesture is one Undo step. Undo also works before releasing or leaving a slider. These settings apply to the whole image; the three colors choose the next stroke.
 
 For keyboard drawing, Tab to the paper. Arrow keys move the cross; Shift moves farther. Space begins or finishes a stroke. Escape cancels an unfinished stroke. Leaving the canvas completes a keyboard stroke. All other tools are ordinary keyboard-accessible controls.
 
@@ -14,7 +14,7 @@ Undo/Redo holds 20 changes in this session, including cleared paper and opened p
 
 ## Test and limits
 
-Run `npm test` with Node 18+. Model tests cover transformation geometry, exact reflection/tiling coordinates, immutable stroke addition, keyboard bounds, invalid import rejection and stroke limits. Browser rendering and subjective artistic quality need separate visual acceptance.
+Run `npm test` with Node 18+. Model tests cover transformation geometry, exact reflection/tiling coordinates, immutable stroke addition, keyboard bounds, invalid import rejection and stroke limits. Additional actual-handler tests with a minimal DOM/canvas double cover live setting gestures, single-step Undo/Redo, no-focus input and transitions between a setting and a repeat-mode action. These tests do not render a browser. Browser rendering and subjective artistic quality need separate visual acceptance.
 
 ## Originality and possible depth
 
