@@ -1,6 +1,6 @@
 # Foldlight
 
-Draw one stroke and turn it into an original repeating image through rotation, reflection or tiling.
+Draw repeating images with rotation, reflection or tiling. Export a PNG or keep an editable project.
 
 ## Run and draw
 
@@ -10,7 +10,7 @@ For keyboard drawing, Tab to the paper. Arrow keys move the cross; Shift moves f
 
 Undo/Redo holds 20 changes in this session, including cleared paper and opened projects. A drawing has up to 60 source strokes and 512 points per stroke. Reaching the per-stroke point limit stops adding points until you finish that stroke. Rotated points outside the square are clipped by the paper.
 
-**Save image** downloads a 1600 × 1600 PNG of the artwork without the pen cross. Browser storage keeps the current drawing when available. Download/open project uses validated editable JSON; downloads are the portable backup. No media is uploaded.
+**Save PNG** downloads a 1600 × 1600 PNG of the artwork without the pen cross. Browser storage keeps the current drawing when available. Download/open project uses validated editable JSON; downloads are the portable backup. No media is uploaded.
 
 ## Test and limits
 
